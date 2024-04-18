@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calcu</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            margin-top: 10%;
+            border-radius: 10px;
+        }
+
+        .top {
+            background-color: grey;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        .time {
+            text-align: left;
+            margin-left: 3%;
+        }
+        .time p{
+            text-align: right;
+            margin-top:-15px;
+        }
+    </style>
+</head>
+<!--Create a calculator-->
+<body><div class="container">
+
+<div class="top">
+
+<div class="time">
+
+<span id="time">Time</span>
+
+</div>
+
+<div id="battery">
+
+<p id="battery-level"><span id="level">N/A</span></p>
+
+</div>
+
+</div>
+
+</div>
+
+</center>
+
+</body>
+
+<script>
+
+// Check if Battery Status API is supported
+
+if ('getBattery' in navigator) {
+
+navigator.getBattery().then(function(battery) {
+
+// Update battery level
+
+function updateBatteryStatus() {
+
+document.getElementById('level').textContent = `${(battery.level * 100).toFixed(2)}%`;
+
+}
+
+
+// Initial update
+
+updateBatteryStatus();
+
+
+// Update when the battery level changes
+
+battery.addEventListener('levelchange', updateBatteryStatus);
+
+});
+
+} else {
+
+document.getElementById('battery-level').textContent = 'Battery Status API not supported';
+
+}
+
+</script>
+
+</html>
