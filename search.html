@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching with highlighting</title>
+    <!--<link href="style.css" rel="stylesheet">-->
+<style>
+body{
+    /* font-size: 20px; */
+    font-family: 'Courier New', Courier, monospace;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    /* display: inline; */
+    /* margin-top:50px; */
+}
+
+.container {
+    margin:5px;
+    height:90vh;
+    /* border:1px solid rgba(25, 216, 34, 0.849) */
+  }
+
+.contain{
+    background: linear-gradient(150deg, rgb(119, 252, 119), #ffcc33, #f05858, rgb(32, 171, 226));
+    border-radius: 8px;
+    height: 200px;
+    /* justify-content: space-between; */
+}
+
+.contain input{
+    margin:65px;
+    height: 30px;
+    width: 50%;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contain span i{
+    /* height: 25px; */
+    font-size: 20px;
+    background: transparents;
+    /* margin-right:35px; */
+}
+  
+.search {
+    padding: 6px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+  
+hr{
+    margin:35px;
+}
+
+.content{
+    padding: 10px;
+    background: linear-gradient(145deg, rgb(255, 241, 254),rgb(74, 74, 79) , rgb(89, 67, 89));
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.task1{
+    margin:10px;
+    text-align:left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.count{
+    margin:10px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Created By:- ITIntern Tech Services</h2>
+        <div class="task1">
+            <p>This is the Task-1 of the</p>
+        </div>
+        <div class="contain">
+                <input type="text" id="search" class="search" placeholder="Search...">
+                <!-- <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span> -->
+        </div>
+        <hr></hr>
+        <div class="count" id="count">
+        </div>
+        <div class="content" id="content">
+            <p>Computer science is the study of computation, algorithms, and information processing. It encompasses a broad range of topics including software development, data structures, artificial intelligence, machine learning, and cybersecurity. The field is foundational to modern technology, providing the principles and methodologies for designing, implementing, and analyzing software and hardware systems. Computer scientists use mathematical and engineering concepts to solve complex problems, optimize processes, and innovate new technologies that drive advancements across various industries.
+                Web development is a subset of computer science focused on creating and maintaining websites and web applications. It involves both front-end and back-end development. Front-end development deals with the visual and interactive aspects of a website, utilizing technologies such as HTML, CSS, and JavaScript to build responsive and user-friendly interfaces. Back-end development, on the other hand, focuses on server-side logic, databases, and application programming interfaces (APIs). Languages like Python, Java, and PHP are commonly used for back-end development.
+                Web developers must have a solid understanding of both client-side and server-side technologies. They work collaboratively with designers, content creators, and other stakeholders to build dynamic and scalable web applications. With the rise of mobile internet usage and the proliferation of various devices, responsive design and cross-platform compatibility have become crucial aspects of web development.
+                The synergy between computer science and web development is evident as advancements in algorithms, artificial intelligence, and data processing directly impact the capabilities of web applications. For instance, machine learning can be integrated into web applications to provide personalized user experiences, while advanced encryption techniques enhance web security. Overall, computer science and web development together continue to shape the digital landscape, making technology more accessible and functional for users worldwide.</p>
+        </div>
+    </div>
+    <!--Use font awesome for the icon
+    <script src="script.js"></script>-->
+<script>
+document.getElementById('search').addEventListener('input', function() {
+    const search = this.value.toLowerCase();
+    const contentDiv = document.getElementById('content');
+    const para = contentDiv.getElementsByTagName('p');
+    const countDiv = document.getElementById('count');
+    let count = 0;
+  
+    // Clear previous highlights
+    for (const paragraph of para) {
+      paragraph.innerHTML = paragraph.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+    }
+  
+    if (search) {
+      for (const paragraph of para) {
+        const regex = new RegExp(`(${search})`, 'gi');
+        paragraph.innerHTML = paragraph.innerHTML.replace(regex, function(match) {
+          count++;
+          return `<span class="highlight">${match}</span>`;
+        });
+      }
+    }
+  
+    // Update the count display
+    countDiv.textContent = `Highlighted words count: ${count}`;
+});
+
+</script>
+    <script src="https://kit.fontawesome.com/02f4bd7d60.js" crossorigin="anonymous"></script>
+</body>
+</html>
