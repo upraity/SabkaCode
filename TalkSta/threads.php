@@ -162,17 +162,19 @@
 
                 echo'
                 <div class="media mt-3">
-                    <img src="profiles/images/'.$image.'" class="mr-3" alt="user"  width="30px" style="border-radius:50%">
-                    <div class="media-body">
-                        <div style="display:flex; text-transform:capitalize; justify-content: space-between;">
-                            <p style="font-size:20px;" class="font-weight-bold my-0">';
-                            if($n){
-                                echo $row1['user_name'];
-                            }
-                            if(!$n){
-                                echo $row1['name'];
-                            }
-                            echo'</p>
+                    <a href="https://dj.000.pe/talksta/'.$row1['user_name'].'" style="text-decoration:none; color:black;">
+                        <img src="profiles/images/'.$image.'" class="mr-3" alt="user"  width="30px" height="30px" style="border:1px solid grey; border-radius:50%">
+                        <div class="media-body">
+                            <div style="display:flex; text-transform:capitalize; justify-content: space-between;">
+                                <p style="font-size:20px;" class="font-weight-bold my-0">';
+                                if($n){
+                                    echo $row1['user_name'];
+                                }
+                                if(!$n){
+                                    echo $row1['name'];
+                                }
+                                echo'</p>
+                            </a>
                             <p style="font-size:16px" class="font-weight-bold text-right my-0"><a href="?id='.$id.'" data-id="'.$id.'" data-toggle="modal" id="openPopup" data-target="#report" name="click11" onclick="fac">Report
                             <input type="hidden" value="'.$id.'" name="id">
                             </a>&nbsp;&nbsp;'.$date1.'</p>
