@@ -273,7 +273,7 @@ function submitForm() {
 -------------------------------- */
 function initSite() {
   Promise.all([
-    loadPartial("nav", ["/navn.html", "navn.html"]),
+    loadPartial("nav", ["/nnav.html", "nnav.html"]),
     loadPartial("footer", ["/footer.html", "footer.html"]),
   ]).then(() => {
     initResponsiveNav();
