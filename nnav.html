@@ -3,85 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SabkaCode provides programming notes, previous year papers, and learning resources for students.">
+    <meta name="keywords" content="SabkaCode, programming notes, previous papers, study materials, coding notes">
+    <meta name="author" content="SabkaCode">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SabkaCode - Programming Notes and Previous Papers">
+    <meta property="og:description" content="Programming notes, previous papers, and study resources for students.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sabkacode.vercel.app/">
+    <meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
+    <meta name="theme-color" content="#3498db">
+    <title>SabkaCode Navigation</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<meta name="description" content="SabkaCode provides programming notes, AKTU MBA previous year question papers with solutions, JEE papers, study resources, and educational materials for students.">
-
-<meta name="keywords" content="SabkaCode, programming notes, aktu mba previous papers, aktu mba solved papers, jee previous year papers, coding notes, study materials, aktu mba hrm mis qtm be papers">
-
-<meta name="author" content="SabkaCode">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://sabkacode.vercel.app/">
-
-
-
-<!-- Open Graph (Facebook / WhatsApp preview) -->
-<meta property="og:title" content="SabkaCode – Programming Notes & Previous Year Papers">
-<meta property="og:description" content="Programming notes, AKTU MBA previous papers, JEE papers and study resources for students.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sabkacode.vercel.app/">
-<meta property="og:image" content="https://sabkacode.vercel.app/logo.png">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SabkaCode – Programming Notes & Previous Papers">
-<meta name="twitter:description" content="Free programming notes and AKTU MBA previous papers with solutions.">
-<meta name="twitter:image" content="https://sabkacode.vercel.app/logo.png">
-
-<!-- Theme Color -->
-<meta name="theme-color" content="#3498db">
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<!-- Structured Data for Google -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "EducationalOrganization",
- "name": "SabkaCode",
- "url": "https://sabkacode.vercel.app",
- "logo": "https://sabkacode.vercel.app/logo.png",
- "description": "SabkaCode provides programming notes, AKTU MBA previous year papers, and educational resources.",
- "sameAs": [
-  "https://t.me/sabkacode",
-  "https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G"
- ]
-}
-</script>
-
-
-<link rel="stylesheet" href="https://sabkacode.vercel.app/style.css">
-    <title>Nav Bar</title>
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "otqed8ed9r");
-</script>
+    <link rel="stylesheet" href="https://sabkacode.vercel.app/style.css">
     <style>
-		 * {
-            box-sizing: border-box;
+        :root {
+            --primary: #3498db;
+            --primary-dark: #1f3650;
+            --surface: rgba(255, 255, 255, 0.12);
+            --text: #102030;
+            --white: #ffffff;
+            --shadow: 0 16px 40px rgba(17, 39, 61, 0.18);
         }
+
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            /* background:
-                radial-gradient(circle at top left, rgba(52, 152, 219, 0.2), transparent 32%),
-                linear-gradient(180deg, #eef8ff 0%, #ffffff 100%); */
             color: var(--text);
         }
 
@@ -90,6 +40,7 @@
             margin: 18px auto;
         }
 
+        /* ─── TOPBAR ─── */
         .topbar {
             display: flex;
             align-items: center;
@@ -114,52 +65,58 @@
         }
 
         .brand-mark {
-            width: 58px;
-            height: 58px;
-            display: grid;
-            place-items: center;
+            width: 58px; height: 58px;
+            display: grid; place-items: center;
             border-radius: 18px;
-            background: rgba(255, 255, 255, 0.16);
+            background: rgba(255,255,255,.16);
             font-size: 28px;
         }
 
-        .brand-copy h1 {
-            margin: 0;
-            font-size: 30px;
-            line-height: 1.1;
-        }
+        .brand-copy h1 { margin: 0; font-size: 30px; line-height: 1.1; }
+        .brand-copy p  { margin: 6px 0 0; color: rgba(255,255,255,.88); font-size: 14px; }
 
-        .brand-copy p {
-            margin: 6px 0 0;
-            color: rgba(255, 255, 255, 0.88);
-            font-size: 14px;
-        }
-
-        .quick-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
+        .quick-actions { display: flex; gap: 10px; flex-wrap: wrap; }
         .quick-actions a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 11px 14px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.12);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 11px 14px; border-radius: 999px;
+            background: rgba(255,255,255,.12);
+            color: var(--white); text-decoration: none;
+            font-weight: 700; font-size: 14px;
         }
 
-        .nav-card {
+        /* ─── SENTINEL (invisible trigger point) ─── */
+        .nav-sentinel {
+            height: 1px;
             margin-top: 14px;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        /* ─── GHOST (holds space when nav is fixed) ─── */
+        .nav-ghost { display: none; }
+        .nav-ghost.is-sticky { display: block; }
+
+        /* ─── NAV CARD ─── */
+        .nav-card {
             padding: 12px;
             border-radius: 24px;
-            background: rgba(31, 54, 80, 0.96);
+            background: rgba(31,54,80,.96);
             box-shadow: var(--shadow);
+            transition: border-radius .25s ease, box-shadow .25s ease;
+        }
+
+        .nav-card.is-sticky {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 999;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 28px rgba(17,39,61,.35);
+            animation: slideDown .26s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-110%); opacity: 0; }
+            to   { transform: translateY(0);     opacity: 1; }
         }
 
         .nav-row {
@@ -168,684 +125,355 @@
             justify-content: center;
             gap: 16px;
             flex-direction: column;
+            width: min(1180px, calc(100% - 24px));
+            margin: 0 auto;
         }
 
         .menu-toggle {
             display: none;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border: none;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            font-size: 20px;
-            cursor: pointer;
+            align-items: center; justify-content: center;
+            width: 48px; height: 48px;
+            border: none; border-radius: 14px;
+            background: rgba(255,255,255,.1);
+            color: var(--white); font-size: 20px; cursor: pointer;
         }
 
         .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            width: 100%;
+            display: flex; align-items: center; justify-content: center;
+            gap: 10px; flex-wrap: wrap; width: 100%;
         }
 
-        .nav-links a,
-        .drop-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 14px;
-            border: none;
-            border-radius: 14px;
-            background: transparent;
-            color: var(--white);
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
+        .nav-links a, .drop-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 14px; border: none; border-radius: 14px;
+            background: transparent; color: var(--white);
+            text-decoration: none; cursor: pointer;
+            font-size: 15px; font-weight: 700;
         }
 
-        .nav-links a:hover,
-        .drop-btn:hover,
-        .drop:hover .drop-btn {
-            background: var(--surface);
-        }
+        .nav-links a:hover, .drop-btn:hover { background: var(--surface); }
 
-        .drop {
-            position: relative;
-        }
+        .drop { position: relative; }
 
         .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 0;
-            min-width: 220px;
-            display: none;
-            padding: 10px;
-            border-radius: 18px;
-            background: #ffffff;
-            box-shadow: 0 20px 36px rgba(15, 27, 39, 0.16);
+            position: absolute; top: calc(100% + 10px); left: 0;
+            min-width: 220px; display: none;
+            padding: 10px; border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 20px 36px rgba(15,27,39,.16);
             z-index: 20;
+            margin-top:-5px;
         }
-
         .dropdown-menu a {
-            display: block;
-            padding: 12px 14px;
-            border-radius: 12px;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
+            display: block; padding: 12px 14px; border-radius: 12px;
+            color: var(--text); text-decoration: none; font-weight: 600;
         }
+        .dropdown-menu a:hover { background: #eef7ff; }
 
-        .dropdown-menu a:hover {
-            background: #eef7ff;
-        }
+        /* Dropdown open/close is now handled purely via JS + .open class
+           (click-based) so it works the same on desktop and touch/mobile,
+           instead of the old CSS :hover which never "closes" on touch. */
+        .drop.open .dropdown-menu { display: block; }
+        .drop.open .drop-btn .fa-chevron-down { transform: rotate(180deg); }
+        .drop-btn .fa-chevron-down { transition: transform .2s ease; }
 
-        .drop:hover .dropdown-menu {
-            display: block;
-        }
-
+        /* ─── FLOATING SOCIAL ─── */
         .floating-button {
-            position: fixed;
-            right: 22px;
-            bottom: 24px;
-            width: 58px;
-            height: 58px;
-            display: grid;
-            place-items: center;
-            border: none;
-            border-radius: 50%;
-            background: #ffffff;
-            color: var(--primary-dark);
-            font-size: 28px;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            z-index: 40;
+            position: fixed; right: 22px; bottom: 24px;
+            width: 58px; height: 58px;
+            display: grid; place-items: center;
+            border: none; border-radius: 50%;
+            background: #fff; color: var(--primary-dark);
+            font-size: 38px; box-shadow: var(--shadow);
+            cursor: pointer; z-index: 40;
         }
 
         .social-stack {
-            position: fixed;
-            right: 22px;
-            bottom: 94px;
-            display: grid;
-            gap: 12px;
-            z-index: 39;
+            position: fixed; right: 22px; bottom: 94px;
+            display: grid; gap: 12px; z-index: 39;
         }
-
         .social-stack a {
-            width: 54px;
-            height: 54px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 24px;
-            box-shadow: 0 14px 28px rgba(17, 39, 61, 0.2);
-            opacity: 0;
-            transform: translateY(12px) scale(0.82);
-            pointer-events: none;
-            transition: 0.25s ease;
+            width: 54px; height: 54px;
+            display: grid; place-items: center;
+            border-radius: 50%; color: #fff;
+            text-decoration: none; font-size: 24px;
+            box-shadow: 0 14px 28px rgba(17,39,61,.2);
+            opacity: 0; transform: translateY(12px) scale(.82);
+            pointer-events: none; transition: .25s ease;
         }
-
-        .social-stack a:nth-child(1) {
-            background: #229ed9;
-        }
-
-        .social-stack a:nth-child(2) {
-            background: #25d366;
-        }
-
-        .social-stack a:nth-child(3) {
-            background: #ff5b5b;
-        }
-
+        .social-stack a:nth-child(1) { background: #229ed9; }
+        .social-stack a:nth-child(2) { background: #25d366; }
+        .social-stack a:nth-child(3) { background: #ff5b5b; }
         .social-stack.open a {
-            opacity: 1;
+            opacity: 1; transform: translateY(0) scale(1); pointer-events: auto;
+        }
+
+        /* ─── BACK TO TOP ─── */
+        #backToTop {
+            position: fixed;
+            left: 22px; bottom: 24px;
+            width: 52px; height: 52px;
+            display: grid; place-items: center;
+            border: none; border-radius: 50%;
+            background: linear-gradient(135deg, #3498db 0%, #1f3650 100%);
+            color: #fff; font-size: 20px;
+            box-shadow: 0 6px 22px rgba(52,152,219,.5);
+            cursor: pointer; z-index: 40;
+            opacity: 0; visibility: hidden;
+            transform: translateY(14px) scale(.85);
+            transition: opacity .3s, visibility .3s, transform .3s, box-shadow .2s;
+        }
+        #backToTop.show {
+            opacity: 1; visibility: visible;
             transform: translateY(0) scale(1);
-            pointer-events: auto;
         }
+        #backToTop:hover {
+            box-shadow: 0 10px 30px rgba(52,152,219,.65);
+            transform: translateY(-3px) scale(1.06);
+        }
+        #backToTop:active { transform: scale(.94); }
 
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 860px) {
-            .topbar {
-                align-items: center;
-            }
-
-            .nav-row {
-                align-items: center;
-                flex-direction: column;
-            }
-
-            .menu-toggle {
-                display: inline-flex;
-            }
-
+            .topbar { align-items: center; }
+            .nav-row { width: 100%; align-items: center; flex-direction: column; }
+            .menu-toggle { display: inline-flex; }
             .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                align-items: stretch;
-                margin-top: 12px;
+                display: none; width: 100%;
+                flex-direction: column; align-items: stretch; margin-top: 12px;
             }
-
-            .nav-links.open {
-                display: flex;
+            .nav-links.open { display: flex; }
+            .nav-links a, .drop-btn {
+                width: 100%; justify-content: flex-start;
+                background: rgba(255,255,255,.04);
             }
-
-            .nav-links a,
-            .drop-btn {
-                width: 100%;
-                justify-content: flex-start;
-                background: rgba(255, 255, 255, 0.04);
-            }
-
-            .drop {
-                width: 100%;
-            }
-
-            .nav-links a i,
-            .drop-btn span {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            }
-
-            .drop-btn {
-                position: relative;
-                padding-right: 44px;
-            }
-
-            .drop-btn .fa-chevron-down {
-                position: absolute;
-                right: 16px;
-            }
-
-            .dropdown-menu {
-                position: static;
-                display: none;
-                min-width: 100%;
-                margin-top: 8px;
-            }
-
-            .drop.open .dropdown-menu {
-                display: block;
-            }
+            .drop { width: 100%; }
+            .drop-btn { position: relative; padding-right: 44px; }
+            .drop-btn .fa-chevron-down { position: absolute; right: 16px; }
+            .dropdown-menu { position: static; min-width: 100%; margin-top: 8px; }
         }
-
-		/*******************/
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            /* padding: 0; */
-            box-sizing: border-box;
-            
-        }
-
-        header {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
-
-        header img{
-            height:10%;
-            width:10%;
-        }
-
-        nav {
-            background-color: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 0.5em;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            display: inline-block;
-        }
-
-        nav a:hover {
-           /* background-color: #555;//#2c3e50;*/
-           background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        nav .dropdown {
-            display: inline-block;
-        }
-
-        nav .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #2c3e50;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        nav .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        .card:hover {
-            background-color: #3498db;
-            color: #fff;
-        }
-
-      
-        a{
-            text-decoration:none;
-            color:black;
-        }
-          .whats{
-            background-color: #4caf50;
-            color: #fff;
-            /* padding: 12px 13.5px; */
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 30px;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            position: fixed;
-            bottom: 60px;
-            right: 120px;
-            height: 55px;
-            width: 55px;
-            opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.5s ease;
-
-         }
-        
-         .whats1 {
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 33px;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            position: fixed;
-            bottom: 140px;
-            right: 35px;
-            height: 55px;
-            width: 55px;
-            opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.5s ease;
-        }
-         
-        .whats2 {
-            /* background-color: #4caf50; */
-            /* color: #fff; */
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 30px;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            position: fixed;
-            bottom: 125px;
-            right: 100px;
-            height: 55px;
-            opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.5s ease;
-        }
-      
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .clicable{
-            bottom:60px;
-            position: fixed;
-            right:40px;
-            width:55px;
-            height:55px;
-            bordeR: none;
-            background-color:transparent;
-            border-radius:15px;
-        }
-        .clicable i{
-            font-size: 55px;
-        }
-
-        .hidden{
-            /* display:none; */
-            pointer-events: none;
-            opacity: 0 !important;
-            transform: translateY(15px) scale(0.7);
-        }
-
-        #btn1.visible,
-		#btn2.visible,
-		#btn3.visible {
-		    opacity: 1;
-		    transform: translateY(0);
-		}
-
-        .whats, .whats1, .whats2 {
-            opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      animation: fadeIn 2s ease; /* Apply the animation to the table */
-    }
-
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    main h2{
-        color:#3498db;
-    } 
-    .program p {
-        text-indent:center;
-    }
-    .p{
-    font-weight: bold;
-    color: red;
-    font-family: Monospace, Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .down {
-    width: 30%;
-    height: 50px;
-    background-color: #3498db;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
-    color:white;
-    font-weight:bold;
-    }
-    #pageCount{
-        color:transparent;
-    }
-
-	
-/* Overlay */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    z-index: 9999;
-}
-
-/* Show class */
-.popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Popup Box */
-.popup-box {
-    background: #fff;
-    padding: 25px;
-    width: 90%;
-    max-width: 330px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    transform: scale(0.7);
-    transition: 0.3s ease;
-}
-
-/* Animation */
-.popup-overlay.active .popup-box {
-    transform: scale(1);
-}
-
-/* Close Button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Button */
-.popup-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup-btn:hover {
-    background: #0056b3;
-}
     </style>
-	<style>
-
-body{
-font-family:Arial, sans-serif;
-margin:0;
-}
-
-header{
-background:#3498db;
-color:white;
-text-align:center;
-padding:1em;
-}
-
-nav{
-background:#2c3e50;
-text-align:center;
-padding:8px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-padding:8px 15px;
-display:inline-block;
-}
-
-nav a:hover{
-background:rgba(0,0,0,0.4);
-}
-
-
-
-/* FLOATING BUTTONS */
-
-.clicable{
-position:fixed;
-bottom:60px;
-right:40px;
-width:55px;
-height:55px;
-border:none;
-background:transparent;
-z-index:9999;
-cursor:pointer;
-}
-
-.clicable i{
-font-size:55px;
-}
-
-/* SOCIAL BUTTON STYLE */
-
-.whats,
-.whats1,
-.whats2{
-position:fixed;
-height:55px;
-width:55px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-opacity:0;
-transform:translateY(15px) scale(0.7);
-transition:all .4s ease;
-z-index:9999;
-pointer-events:none;
-}
-
-/* TELEGRAM */
-
-.whats1{
-background:#3498db;
-color:white;
-font-size:30px;
-bottom:140px;
-right:35px;
-}
-
-/* ARATTAI */
-
-.whats2{
-bottom:125px;
-right:100px;
-}
-
-/* WHATSAPP */
-
-.whats{
-background:#4caf50;
-color:white;
-font-size:30px;
-bottom:60px;
-right:120px;
-}
-
-/* VISIBLE STATE */
-
-.visible{
-opacity:1;
-transform:translateY(0) scale(1);
-pointer-events:auto;
-}
-
-</style>
 </head>
-
 <body>
 
-    <header>
-        <!--<img src="1.png" alt="SabkaCode Logo">-->
-        <h1>SabkaCode</h1>
-        <p>Programming Notes, Previous Papers & Learning Resources</p>
-        <!-- Placeholder for logo image -->
-        
+<div class="site-shell">
+    <header class="topbar">
+        <a class="brand-block" href="https://sabkacode.vercel.app/">
+            <div class="brand-mark"><i class="fa-solid fa-code"></i></div>
+            <div class="brand-copy">
+                <h1>SabkaCode</h1>
+                <p>Programming Notes, Previous Papers, and learning resources for students</p>
+            </div>
+        </a>
+        <div class="quick-actions">
+            <a href="https://t.me/sabkacode" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-telegram"></i> Join Telegram
+            </a>
+            <a href="https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> Join Channel
+            </a>
+        </div>
     </header>
 
-    <nav>
-        <a href="https://sabkacode.vercel.app">Home</a>
-        <div class="dropdown">
-	    <a href="https://sabkacode.vercel.app/notes">Notes</i></a>
-           
-        </div>
-        <div class="dropdown">
-            <a href="#">Resources</i></a>
-            <div class="dropdown-content">
-                <!--<a href="#">Result</a><br>
-                <a href="">Projects</i>
-                    <ul>
-                        <li>qUizZY LoOP</li>
-                        <li>Add Data</li>
-                    </ul>
-		</a>-->
-				<a href="https://sabkacode.vercel.app/jee">Jee Paper</a><br>
-                <a href="#">Admitcard</a><br>
-                <a href="https://dj.is-best.net/frontpage">Front Page</a><br>
-				<a href="/p">Previous Papers</a><br>
-				<a href="/solve">PP Solution</a><br>
-				<a href="https://djupraity.vercel.app/encrypt">d&Encrypt Tool</a><br>
+    <!-- IntersectionObserver watches this invisible line.
+         When it exits the viewport (user scrolled past it), nav goes sticky. -->
+    <div class="nav-sentinel" id="navSentinel"></div>
 
-	    </div>
+    <!-- This invisible block holds layout space when nav is position:fixed -->
+    <div class="nav-ghost" id="navGhost"></div>
+
+    <nav class="nav-card" id="mainNav">
+        <div class="nav-row">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="https://sabkacode.vercel.app/">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+                <a href="https://sabkacode.vercel.app/notes">
+                    <i class="fa-solid fa-book"></i> Notes
+                </a>
+
+                <div class="drop" id="resourcesDrop">
+                    <button class="drop-btn" type="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-layer-group"></i> Resources</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="https://sabkacode.vercel.app/jee">JEE Papers</a>
+                        <a href="https://dj.is-best.net/frontpage">Front Page</a>
+                        <a href="https://sabkacode.vercel.app/p">Previous Papers</a>
+                        <a href="https://sabkacode.vercel.app/solve">Solved Papers</a>
+                        <a href="https://djupraity.artizote.com/encrypt">Encrypt Tool</a>
+                    </div>
+                </div>
+
+                <a href="https://sabkacode.vercel.app/blog/">
+                    <i class="fa-solid fa-newspaper"></i> Blog
+                </a>
+
+                <div class="drop" id="contactDrop">
+                    <button class="drop-btn" type="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-address-card"></i> Contact</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="https://sabkacode.vercel.app/contactus">Contact Us</a>
+                        <a href="https://sabkacode.vercel.app/aboutus">About Us</a>
+                        <a href="https://sabkacode.vercel.app/privacy">Privacy Policy</a>
+                        <a href="https://sabkacode.vercel.app/disclaimer">Disclaimer</a>
+                        <a href="https://sabkacode.vercel.app/termscondition">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
         </div>
-		<div class="dropdown">
-        	<a href="#">Contact Us</a>
-			<div class="dropdown-content">
-				<a href="https://sabkacode.vercel.app/contactus.html">Contact Us</a><br>
-				<a href="https://sabkacode.vercel.app/aboutus.html">About Us</a><br>
-				<a href="https://sabkacode.vercel.app/disclaimer.html">Disclaimer</a><br>
-		        <a href="https://whatsapp.com/channel/0029VaElLRrAYlUMk0qIHX1G">Join Channel</a><br>
-                <a href="https://sabkacode.vercel.app/termscondition.html">Term & Condition</a><br>
-			</div>
-		</div>      
     </nav>
+</div>
 
-	<!-- Popup ---
-<div class="popup-overlay" id="popup">
-    <div class="popup-box">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <h2>Welcome 👋</h2>
-        <p>Thanks for visiting our website!<BR>Please fill the form</p>
-         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIHOsG_FDVr6QEB0kPqMl3r53ujusnnYHJr53t48FzAKMajg/viewform?embedded=true" width="310" height="400px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-</div>-->
-		<button id="btn1" class="whats1 hidden" onclick="tele()"><i class="fa-brands fa-telegram"></i></button>
-        <img id="btn2" class="whats2 hidden" src="https://htmlify.me/djdj/youtube/arattai.svg" width="55px" height="55px" onclick="arattai()">
-        <button id="btn3" class="whats hidden" onclick="whats()"><i class="fab fa-whatsapp whatsapp-icon"></i></button>
-        <button class="clicable" id="click" > <i class="fa-solid fa-circle-user" style="color: #34495e;"></i></button>
+<!-- Social stack -->
+<div class="social-stack" id="socialStack">
+    <a href="https://t.me/sabkacode" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+    <a href="https://wa.me/918938870794" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://chat.arattai.in/groups/n43545f313238383531313639383036383535383136355f32303030353332363533342d47437c3031303134303039303132333137363136323533383832353530" target="_blank" rel="noopener noreferrer" aria-label="Arattai">
+        <i class="fa-solid fa-comment-dots"></i>
+    </a>
+</div>
 
-   <!-- <footer>
-        © 2026 SabkaCode – Resources
-    </footer>
-	-->
-	
+<button class="floating-button" id="floatingToggle" type="button" aria-label="Open social links">
+    <i class="fa-solid fa-circle-user"></i>
+</button>
 
-	
-	<script src="/script.js" defer></script>
+<!-- Back to Top button (bottom-left, blue gradient) -->
+<button id="backToTop" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* ---------- Sticky nav on scroll ---------- */
+    var sentinel = document.getElementById('navSentinel');
+    var nav = document.getElementById('mainNav');
+    var ghost = document.getElementById('navGhost');
+
+    if (sentinel && nav && ghost) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    ghost.style.height = nav.offsetHeight + 'px';
+                    nav.classList.add('is-sticky');
+                    ghost.classList.add('is-sticky');
+                } else {
+                    nav.classList.remove('is-sticky');
+                    ghost.classList.remove('is-sticky');
+                }
+            });
+        });
+        observer.observe(sentinel);
+    }
+
+    /* ---------- Mobile hamburger menu ---------- */
+    var menuToggle = document.getElementById('menuToggle');
+    var navLinks = document.getElementById('navLinks');
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+    }
+
+    /* ---------- Dropdowns: click to open, click again / outside / other dropdown to close ---------- */
+    var drops = Array.prototype.slice.call(document.querySelectorAll('.drop'));
+    drops.forEach(function (drop) {
+        var btn = drop.querySelector('.drop-btn');
+        if (!btn) return;
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var alreadyOpen = drop.classList.contains('open');
+
+            // close every dropdown first (so only one is open at a time)
+            drops.forEach(function (d) {
+                d.classList.remove('open');
+                var b = d.querySelector('.drop-btn');
+                if (b) b.setAttribute('aria-expanded', 'false');
+            });
+
+            // re-open this one only if it wasn't already open (this is the toggle/close fix)
+            if (!alreadyOpen) {
+                drop.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // clicking a link inside the dropdown should close it too
+        drop.querySelectorAll('.dropdown-menu a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                drop.classList.remove('open');
+            });
+        });
+    });
+
+    // click anywhere outside -> close all open dropdowns + mobile menu
+    document.addEventListener('click', function (e) {
+        drops.forEach(function (d) {
+            if (!d.contains(e.target)) {
+                d.classList.remove('open');
+                var b = d.querySelector('.drop-btn');
+                if (b) b.setAttribute('aria-expanded', 'false');
+            }
+        });
+        if (navLinks && menuToggle && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Escape key closes everything
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            drops.forEach(function (d) { d.classList.remove('open'); });
+            if (navLinks) navLinks.classList.remove('open');
+        }
+    });
+
+    /* ---------- Floating social button ---------- */
+    var floatingToggle = document.getElementById('floatingToggle');
+    var socialStack = document.getElementById('socialStack');
+    if (floatingToggle && socialStack) {
+        floatingToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            socialStack.classList.toggle('open');
+        });
+        document.addEventListener('click', function (e) {
+            if (!socialStack.contains(e.target) && !floatingToggle.contains(e.target)) {
+                socialStack.classList.remove('open');
+            }
+        });
+    }
+
+    /* ---------- Back to top ---------- */
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
+</script>
 
 </body>
 </html>
-
