@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Notes – AKTU, DBRAU, CSJMU | SabkaCode</title>
+  <meta name="description" content="Free study notes for AKTU, DBRAU and CSJMU students. MCA, MBA, BCA notes for all subjects and semesters — 100% free."/>
+  <link rel="canonical" href="https://sabkacode.vercel.app/notes"/>
+  <meta property="og:title" content="Free Notes – AKTU, DBRAU, CSJMU | SabkaCode"/>
+  <meta property="og:description" content="Free notes for all semesters and subjects — AKTU MCA/MBA, DBRAU BCA, CSJMU BCA."/>
+  <meta property="og:url" content="https://sabkacode.vercel.app/notes"/>
+  <meta property="og:image" content="https://sabkacode.vercel.app/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#3498db;--blue-d:#1f6fa8;--blue-l:#e8f4fd;
+      --dark:#0f1c2e;--mid:#2c4a6e;--text:#2d3748;--muted:#718096;
+      --bg:#f7faff;--white:#fff;--radius:14px;
+      --shadow:0 4px 24px rgba(52,152,219,.10);
+      --shadow-lg:0 12px 40px rgba(52,152,219,.18);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+
+   
+
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,var(--dark) 0%,var(--mid) 55%,var(--blue) 100%);padding:90px 5% 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+    .badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:18px}
+    .hero h1{font-family:'Sora',sans-serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#fff;margin-bottom:14px;line-height:1.15}
+    .hero h1 span{color:#74c0fc}
+    .hero p{color:rgba(255,255,255,.78);font-size:1.05rem;max-width:520px;margin:0 auto 32px}
+    .hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .hs{text-align:center}
+    .hs-num{font-family:'Sora',sans-serif;font-size:1.6rem;font-weight:800;color:#74c0fc}
+    .hs-label{font-size:.75rem;color:rgba(255,255,255,.65);letter-spacing:.5px}
+
+    /* ── SECTION ── */
+    .section{padding:64px 5%}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .sec-tag{display:inline-block;background:var(--blue-l);color:var(--blue);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:12px}
+    h2{font-family:'Sora',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.2}
+    .lead{color:var(--muted);font-size:1rem;max-width:580px;margin-bottom:36px}
+
+    /* ── INFO SECTIONS ── */
+    .section h1{font-family:'Sora',sans-serif;font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:800;color:var(--dark);margin-bottom:14px}
+    .section p{color:var(--muted);margin-bottom:14px;font-size:.97rem}
+    .section ul{padding-left:22px;color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .section ul li{margin-bottom:6px}
+
+    /* ── UNIVERSITY CARDS ── */
+    .uni-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:36px}
+    .uni-card{background:var(--white);border-radius:20px;padding:36px 30px;box-shadow:var(--shadow);border:2px solid transparent;text-decoration:none;display:block;transition:all .25s;position:relative;overflow:hidden}
+    .uni-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue)}
+    .uni-card:hover{border-color:var(--blue);transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .uni-icon{width:56px;height:56px;background:var(--blue-l);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px}
+    .uni-card h3{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:800;color:var(--dark);margin-bottom:4px}
+    .uni-card .uni-full{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+    .uni-courses{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+    .uni-courses span{background:var(--blue-l);color:var(--blue);font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:50px}
+    .uni-arrow{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-size:.88rem;font-weight:600}
+    .uni-arrow i{transition:transform .2s}
+    .uni-card:hover .uni-arrow i{transform:translateX(4px)}
+
+    /* ── SUBJECTS ── */
+    .subjects-bg{background:var(--white)}
+    .sub-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+    .sub-tab{padding:8px 20px;border-radius:50px;border:1.5px solid #e2e8f0;background:transparent;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s}
+    .sub-tab.active,.sub-tab:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+    .sub-panel{display:none;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+    .sub-panel.active{display:grid}
+    .sub-chip{background:var(--bg);border-radius:10px;padding:14px 16px;font-size:.85rem;font-weight:500;color:var(--text);border:1.5px solid #e8edf5;transition:all .2s;display:flex;align-items:center;gap:8px}
+    .sub-chip i{color:var(--blue);font-size:.9rem}
+    .sub-chip:hover{border-color:var(--blue);background:var(--blue-l);color:var(--blue)}
+
+    /* ── WHY ── */
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px}
+    .why-card{background:var(--white);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);text-align:center}
+    .why-icon{font-size:2rem;margin-bottom:12px}
+    .why-card h4{font-family:'Sora',sans-serif;font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+    .why-card p{font-size:.83rem;color:var(--muted)}
+
+    /* ── FOOTER ── */
+    footer{
+      background:var(--dark);
+      color:rgba(255,255,255,.6);
+      text-align:center;
+      padding:28px 5%;
+      font-size:.83rem;
+    }
+    footer a{color:#74c0fc;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+
+    /* ── TRANSLATE FAB ── */
+    .t-fab{position:fixed;bottom:26px;right:26px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .t-btn{width:52px;height:52px;background:var(--blue);border-radius:50%;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(52,152,219,.5);color:#fff;font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:all .25s;flex-direction:column;gap:1px}
+    .t-btn small{font-size:.45rem;font-weight:700;letter-spacing:.5px}
+    .t-btn:hover{background:var(--blue-d);transform:scale(1.08)}
+    .t-drawer{background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.15);padding:14px 12px;width:210px;max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .3s ease}
+    .t-drawer.open{max-height:420px;opacity:1}
+    .t-title{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;padding:0 4px}
+    .t-grid{display:flex;flex-direction:column;gap:3px;max-height:340px;overflow-y:auto}
+    .t-opt{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:8px;border:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text);cursor:pointer;text-align:left;width:100%;transition:background .15s}
+    .t-opt:hover{background:var(--blue-l);color:var(--blue)}
+    .t-opt.active{background:var(--blue);color:#fff}
+
+    /* ── REVEAL ── */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+    .reveal.on{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+
+	<div id="nav"></div>
+  <!-- ══ HERO ══ -->
+<section class="hero">
+  <h1>Not Found<br/></h1>
+</section>
+	<script src="/script.js"></script>
+</body>
+</html>
